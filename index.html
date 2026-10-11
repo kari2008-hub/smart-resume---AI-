@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartResume AI | Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a class="brand" href="#">SmartResume<span>AI</span></a>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#analyzer">Analyzer</a>
+            <a href="#about">About</a>
+        </nav>
+        <a class="nav-button" href="#analyzer">Get Started ↗</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="badge">✦ AI-POWERED CAREER ASSISTANT</div>
+            <h1>Your Resume.<br>
+                Your <span>Dream Career.</span>
+            </h1>
+            <p class="hero-text">
+                Discover your resume's potential. Analyze skills, check job
+                compatibility, and get actionable suggestions to stand out.
+            </p>
+            <a class="primary-button" href="#analyzer">
+                Analyze My Resume →
+            </a>
+
+            <div class="stats">
+                <div><strong>AI</strong><small>Smart Analysis</small></div>
+                <div><strong>Skills</strong><small>Gap Detection</small></div>
+                <div><strong>100%</strong><small>Instant Feedback</small></div>
+            </div>
+        </section>
+
+        <section class="analyzer section" id="analyzer">
+            <div class="section-heading">
+                <span class="eyebrow">YOUR CAREER TOOLKIT</span>
+                <h2>Resume <span>Analyzer</span></h2>
+                <p>Upload your resume and compare it with your dream job.</p>
+            </div>
+
+            <div class="analyzer-card">
+                <label for="resume">Upload Your Resume</label>
+                <div class="upload-box">
+                    <div class="upload-icon">↑</div>
+                    <h3>Choose your resume file</h3>
+                    <p>PDF, TXT or DOCX — select a file from your device</p>
+                    <input type="file" id="resume"
+                           accept=".pdf,.txt,.docx">
+                </div>
+
+                <label for="jobRole">Target Job Role</label>
+                <select id="jobRole">
+                    <option value="software developer">Software Developer</option>
+                    <option value="java developer">Java Developer</option>
+                    <option value="web developer">Web Developer</option>
+                    <option value="data analyst">Data Analyst</option>
+                    <option value="python developer">Python Developer</option>
+                </select>
+
+                <label for="jobDescription">Job Description</label>
+                <textarea id="jobDescription" rows="5"
+                    placeholder="Paste the job description here..."></textarea>
+
+                <button class="primary-button analyze-button"
+                        id="analyzeBtn">
+                    Analyze Resume ✨
+                </button>
+
+                <p class="note">
+                    Your resume is analyzed locally in this demo.
+                    Results are indicative, not an official ATS score.
+                </p>
+            </div>
+
+            <div id="results" class="results hidden">
+                <div class="result-top">
+                    <div>
+                        <span class="eyebrow">ANALYSIS REPORT</span>
+                        <h2>Your Resume Insights</h2>
+                    </div>
+                    <div class="score-circle" id="scoreCircle">
+                        <strong id="score">0%</strong>
+                        <small>Match score</small>
+                    </div>
+                </div>
+
+                <div class="result-grid">
+                    <div class="result-box">
+                        <h3>✅ Matching Skills</h3>
+                        <div id="matchedSkills"></div>
+                    </div>
+                    <div class="result-box">
+                        <h3>🎯 Skills to Improve</h3>
+                        <div id="missingSkills"></div>
+                    </div>
+                </div>
+
+                <div class="result-box suggestions">
+                    <h3>💡 Recommendations</h3>
+                    <ul id="suggestions"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section features" id="features">
+            <div class="section-heading">
+                <span class="eyebrow">WHY SMARTRESUME?</span>
+                <h2>Make Every Application <span>Count</span></h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Resume Scoring</h3>
+                    <p>Get an indicative score based on relevant skills and keywords.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔎</div>
+                    <h3>Skill Gap Analysis</h3>
+                    <p>Identify skills mentioned in a job description but missing from your resume.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Smart Suggestions</h3>
+                    <p>Discover practical ways to improve your resume for a target role.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <span class="eyebrow">ABOUT THE PROJECT</span>
+            <h2>Helping Students Become <span>Career Ready</span></h2>
+            <p>
+                SmartResume AI is a student project that demonstrates
+                keyword-based resume analysis and job-description matching.
+                It is designed to help users understand and improve their resumes.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a class="brand" href="#">SmartResume<span>AI</span></a>
+        <p>Built for smarter career preparation · Student Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
